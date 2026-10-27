@@ -2,7 +2,7 @@
 
 The people's meme coin on BNB Smart Chain. An Australian (Melbourne-based) community project.
 
-![BNBGUY](assets/logo.png)
+![BNBGUY](logo.png)
 
 ## Contract
 - Chain: BNB Smart Chain (BEP-20)
@@ -19,7 +19,7 @@ The people's meme coin on BNB Smart Chain. An Australian (Melbourne-based) commu
 - LP: about 77.46% burned + 19.41% time-locked (DxLock) = 96.87% (checked on-chain 24 Oct 2026)
 
 ## Security
-- BlockSAFU audit, Audit Release #1437: https://blocksafu.com/audit/0x28f6267De2d654D407253aC41bffd24FD21ff985 (copy in `audit/`)
+- BlockSAFU audit, Audit Release #1437: https://blocksafu.com/audit/0x28f6267De2d654D407253aC41bffd24FD21ff985 (copy: [BlockSAFU_BNBGUY_audit.pdf](BlockSAFU_BNBGUY_audit.pdf))
   - Ownership renounced, owner/deployer hold 0%, no honeypot
   - Owner cannot modify fees, pause trading, blacklist, or set max tx/wallet; no proxy, no self-destruct
 - CertiK Skynet token scan: https://skynet.certik.com/tools/token-scan/bsc/0x28f6267de2d654d407253ac41bffd24fd21ff985
