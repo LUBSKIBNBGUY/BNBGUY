@@ -33,4 +33,11 @@ The people's meme coin on BNB Smart Chain. An Australian (Melbourne-based) commu
 - CoinGecko: https://www.coingecko.com/en/coins/bnbguy
 - DexScreener: https://dexscreener.com/bsc/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363
 
+## Docs
+- [Tokenomics](TOKENOMICS.md) — supply, LP, burn wallet, current buyback & burn focus
+- [Burn log](BURNS.md) — every buyback and burn with tx links
+- [Security](SECURITY.md) — renounced ownership, audit, scam warnings
+- [Official links](LINKS.md) — the only links to trust
+- [Brand kit](brand/) — logo and animations
+
 Meme coin. Not financial advice. Not affiliated with Binance or BNB Chain.
