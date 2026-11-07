@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BNBGUY Whitepaper 3.0, November 2026 transparency update. Dated on-chain balances, not a promise of returns." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>BNBGUY Whitepaper 3.0 — November 2026 | BNBGUY</title>
+  <link rel="canonical" href="https://bnbguy.io/whitepaper/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="BNBGUY" />
+  <meta property="og:url" content="https://bnbguy.io/whitepaper/" />
+  <meta property="og:title" content="BNBGUY Whitepaper 3.0 — November 2026" />
+  <meta property="og:description" content="BNBGUY Whitepaper 3.0, November 2026 transparency update. Dated on-chain balances, not a promise of returns." />
+  <meta property="og:image" content="https://bnbguy.io/whitepaper/images/bnbguy-whitepaper-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@BNBguy_BSC" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="../assets/favicon-64.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="BNBGUY home">
+        <picture><source srcset="../assets/bnbguy-head-96.webp" type="image/webp" /><img src="../assets/bnbguy-head.png" alt="" width="40" height="40" /></picture>
+        <span>BNBGUY</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#about">About</a>
+        <a href="/#tokenomics">Tokenomics</a>
+        <a href="/#buy">How to buy</a>
+        <a href="/#chart">Chart</a>
+        <a href="/#verify">Verify</a>
+        <a href="/#roadmap">Roadmap</a>
+        <a href="/#links">Links</a>
+      </nav>
+      <a class="btn btn-gold btn-sm" href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <a href="/#about">About</a>
+      <a href="/#tokenomics">Tokenomics</a>
+      <a href="/#utilities">Utilities</a>
+      <a href="/#buy">How to buy</a>
+      <a href="/#chart">Chart</a>
+      <a href="/#verify">Verify</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#community">Community</a>
+      <a href="/#roadmap">Roadmap</a>
+      <a href="/#links">Links</a>
+      <a class="btn btn-gold" href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="section wp">
+      <div class="wrap wp-body">
+        <figure class="wp-figure"><img src="images/bnbguy-whitepaper-cover.jpg" alt="BNBGUY Whitepaper 3.0, November 2026. Treasury and liquidity transparency report." width="1791" height="716" /></figure>
+        <h1>BNBGUY Whitepaper 3.0 — November 2026 Transparency Update</h1>
+        <p class="wp-source">November 2026 revision on this site. Original X post, 3 March 2026: <a href="https://x.com/BNBguy_BSC/status/2028744053781938607" target="_blank" rel="noopener noreferrer">view the original post</a>. This page does not claim that off-site copies have already been updated.</p>
+        <p>A meme coin. A community. Receipts you can check.</p>
+        <p>This is a living document, not a promise of returns. This revision separates observed on-chain balances from project history and future ideas.</p>
+
+        <h2>Mission and origins</h2>
+        <p>“To provide zero utility in the most useful way possible.”</p>
+        <p>BNBGUY is a community-run meme token on BNB Smart Chain. The Shiba-bites-a-Binance-intern origin story is fictional meme lore, not a claim of employment, affiliation or endorsement. Memes bring people together; transparent records help people check the facts.</p>
+
+        <h2>Contract and tokenomics</h2>
+        <p>Network: BNB Smart Chain.</p>
+        <ul>
+          <li>Token contract: <code>0x28f6267De2d654D407253aC41bffd24FD21ff985</code></li>
+          <li>PancakeSwap V2 BNBGUY/WBNB pair: <code>0xFb300ebF79ec2f0101161eaA8c7127C728e7a363</code></li>
+        </ul>
+        <p>At the snapshot below, the contract reported a total supply of 1,000,000,000 BNBGUY and owner() returned the zero address. Sending tokens to the dead address does not reduce this contract-reported totalSupply().</p>
+        <p>The project’s launch record describes 100% of tokens entering liquidity, with no presale or team allocation. This describes the initial distribution, not current ownership or a guarantee about anyone’s future trades.</p>
+        <p>The project describes its token tax as 0% buy, sell and transfer. Gas and exchange fees still apply. Check current simulations and the contract before trading; this revision does not certify a fresh tax or honeypot test.</p>
+
+        <h2>November on-chain snapshot</h2>
+        <p>BNB Chain block <a href="https://bscscan.com/block/132105546" target="_blank" rel="noopener noreferrer">132105546</a> — 7 November 2026, 11:34:45 AEDT. Figures for the dead and zero addresses are the exact checked values. Other amounts below are the reviewed snapshot figures. Balances and percentages are a dated snapshot, not live statistics.</p>
+
+        <h2>BNBGUY tokens at the dead address</h2>
+        <p>50,313,855 BNBGUY — 5.0313855% of contract-reported supply, or 5.03% rounded — were held at <code>0x000000000000000000000000000000000000dEaD</code>.</p>
+        <p>This is the BNBGUY token balance, not the percentage of liquidity at a burn address. LP tokens are a different asset. <a href="https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985?a=0x000000000000000000000000000000000000dEaD" target="_blank" rel="noopener noreferrer">View the token balance on BscScan</a>.</p>
+
+        <h2>Liquidity: observed Cake-LP balances</h2>
+        <p>Total LP supply: 65,462.4621 Cake-LP.</p>
+        <ul>
+          <li>Dead address: 50,173.9648 LP (76.645398%).</li>
+          <li>Zero address: 589.6557 LP (0.900754%).</li>
+          <li>Combined dead and zero addresses: 77.55% of all LP.</li>
+        </ul>
+        <p>Other identified LP contract balances. Both <code>0xc8f14c26c32bc4bb51d41a6c7822a37bd7de5a9d</code> and <code>0x22dc39bfd015e131e6393d9ec78ce7144188bd37</code> returned owner() as the dead address. A dead-address owner() result is not treated as proof that every withdrawal path is impossible. The withdrawal implementation was not audited. Lock dates below are identified project records, not a new audit of every withdrawal condition.</p>
+        <ul>
+          <li><a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0xc8f14c26c32bc4bb51d41a6c7822a37bd7de5a9d" target="_blank" rel="noopener noreferrer"><code>0xc8f14c26c32bc4bb51d41a6c7822a37bd7de5a9d</code></a>: 3,595.68 LP (5.49%). owner() returned the dead address. Withdrawal implementation not audited.</li>
+          <li><a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0xe5fb46157e52a0616fee8d1a198b98c4a9409054" target="_blank" rel="noopener noreferrer"><code>0xe5fb46157e52a0616fee8d1a198b98c4a9409054</code></a>: 7,357.68 LP (11.24%). Identified in the existing project record as the founder’s lock, extended on 21 October 2026 to 1 January 2028. <a href="https://bscscan.com/tx/0x832c007a45c8488d6f61ecb1fa724929d98cec8c82f543d52c30a7bb2d03b6f9" target="_blank" rel="noopener noreferrer">Extension transaction</a>.</li>
+          <li><a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0x22dc39bfd015e131e6393d9ec78ce7144188bd37" target="_blank" rel="noopener noreferrer"><code>0x22dc39bfd015e131e6393d9ec78ce7144188bd37</code></a>: 1,708.74 LP (2.61%). The existing project record gives an unlock date of 2 January 2036. owner() returned the dead address. Withdrawal implementation not audited.</li>
+          <li><a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0xf6c999ea7e4afb5593b87ac6bd09b5346419406c" target="_blank" rel="noopener noreferrer"><code>0xf6c999ea7e4afb5593b87ac6bd09b5346419406c</code></a>: 1,303.1290 LP (1.99%). The existing project record identifies this as a community member’s lock whose term ended on 4 September 2026. It is not presented here as currently time-locked.</li>
+        </ul>
+        <p>The balances and owner() results above were read at the stated block. This revision does not publish a combined burned-or-locked percentage, or a future percentage after any recorded unlock. The withdrawal paths were not audited, so those classifications are not settled.</p>
+        <p>LP burns do not guarantee a minimum price, stable liquidity value, low volatility or protection from loss. Pool reserves change with trades. <a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363#balances" target="_blank" rel="noopener noreferrer">LP token holders on BscScan</a>.</p>
+
+        <figure class="lp-visual" aria-labelledby="lp-visual-title">
+          <h3 id="lp-visual-title">Cake-LP at block 132105546</h3>
+          <p class="snap-note">7 November 2026, 11:34:45 AEDT. Total 65,462.4621 Cake-LP. Gold rows are balances at the dead and zero addresses (77.55% combined). Grey rows are other contracts and are not treated as burned. Bar lengths are proportional to share of total LP. The zero-address bar is a thin slice; its label carries the exact share. 77.55% of Cake-LP at dead and zero addresses. Separate BNBGUY dead-address balance: 50,313,855 tokens (5.03%). Other contract balances are listed above. No aggregate permanence claim.</p>
+          <div class="lp-group">
+            <p class="lp-group-title">Dead and zero addresses · 77.55%</p>
+            <div class="lp-row">
+              <span class="lp-label">Dead address</span>
+              <span class="lp-track" role="img" aria-label="76.645398 percent"><span class="lp-fill" style="width:76.645398%"></span></span>
+              <span class="lp-meta">50,173.9648 LP · 76.645398%</span>
+            </div>
+            <div class="lp-row">
+              <span class="lp-label">Zero address</span>
+              <span class="lp-track" role="img" aria-label="0.900754 percent"><span class="lp-fill is-thin" style="width:0.900754%"></span></span>
+              <span class="lp-meta">589.6557 LP · 0.900754%</span>
+            </div>
+          </div>
+          <div class="lp-group is-other">
+            <p class="lp-group-title">Other contracts · balances only, withdrawal paths not audited</p>
+            <div class="lp-row">
+              <span class="lp-label"><code>0xc8f1…5a9d</code></span>
+              <span class="lp-track" role="img" aria-label="5.49 percent"><span class="lp-fill" style="width:5.49%"></span></span>
+              <span class="lp-meta">3,595.68 LP · 5.49% · owner() dead · withdrawal not audited</span>
+            </div>
+            <div class="lp-row">
+              <span class="lp-label"><code>0xe5fb…9054</code></span>
+              <span class="lp-track" role="img" aria-label="11.24 percent"><span class="lp-fill" style="width:11.24%"></span></span>
+              <span class="lp-meta">7,357.68 LP · 11.24% · project record, unlock 1 January 2028</span>
+            </div>
+            <div class="lp-row">
+              <span class="lp-label"><code>0x22dc…bd37</code></span>
+              <span class="lp-track" role="img" aria-label="2.61 percent"><span class="lp-fill" style="width:2.61%"></span></span>
+              <span class="lp-meta">1,708.74 LP · 2.61% · owner() dead · project record, unlock 2 January 2036 · withdrawal not audited</span>
+            </div>
+            <div class="lp-row">
+              <span class="lp-label"><code>0xf6c9…406c</code></span>
+              <span class="lp-track" role="img" aria-label="1.99 percent"><span class="lp-fill" style="width:1.99%"></span></span>
+              <span class="lp-meta">1,303.1290 LP · 1.99% · project record, term ended 4 September 2026 · not presented as time-locked</span>
+            </div>
+          </div>
+          <p class="snap-note">Separate BNBGUY token balance at the dead address: 50,313,855 (5.03% of supply). That is not an LP percentage. These rows are not a complete holder list and are not combined into a burned-or-locked percentage.</p>
+        </figure>
+
+        <h2>Selected significant token addresses</h2>
+        <p>These are checked balances, not a complete ranking of all holders:</p>
+        <ul>
+          <li>PancakeSwap pair <code>0xFb300ebF79ec2f0101161eaA8c7127C728e7a363</code>: 339,853,710.1273 BNBGUY (33.99%).</li>
+          <li>Identified DxLock token contract, <code>0x298d35b8d2c733f5a15dc731d6e99423f40cbc2b</code>: 99,000,000 BNBGUY (9.90%). The previous whitepaper gives 24 December 2027 as its unlock date; this revision verifies its balance, not the full lock terms.</li>
+          <li>Public wallet previously identified by BscScan’s CZ label, <code>0x28816c4c4792467390c90e5b426f198570e29307</code>: 72,417,127.6856 BNBGUY (7.24%). A balance or explorer label does not establish endorsement, partnership or participation by CZ or Binance.</li>
+          <li>Dead address: 50,313,855 BNBGUY (5.03%).</li>
+        </ul>
+        <p><a href="https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985#balances" target="_blank" rel="noopener noreferrer">Token holders on BscScan</a></p>
+
+        <h2>Treasury and liquidity mechanics</h2>
+        <p>There is no guaranteed revenue. Sponsor income, platform earnings or other receipts should only be described as received when supported by records. Holdings and unrealised appreciation are not the same as cash income.</p>
+        <p>The project’s stated approach, when funds are available, is to add liquidity, burn the LP tokens received and publish the transactions. Reports should distinguish funds added, LP received, LP burned and any separate CAKE or BNBGUY token burns. There is no fixed burn schedule or guaranteed allocation of future receipts.</p>
+        <ol class="approach is-wide">
+          <li><strong>Funds available</strong><span>Only when treasury funds exist. No guaranteed income.</span></li>
+          <li><strong>Add liquidity</strong><span>Stated use of those funds.</span></li>
+          <li><strong>Burn received LP</strong><span>The LP tokens received from that addition.</span></li>
+          <li><strong>Publish links</strong><span>Transaction links. No fixed schedule.</span></li>
+        </ol>
+        <p class="snap-note">Stated approach when funds are available; no guaranteed income or fixed schedule.</p>
+        <p>Earlier versions disclosed WLFI and NFT holdings. Those quantities and vesting terms have not been independently refreshed for this November snapshot, so they are not repeated here as current balances. Holding an asset does not create a partnership with its issuer.</p>
+        <p>Historical treasury reference: <a href="https://etherscan.io/address/0x74B4f6A2E579D730aAcb9dD23cfbbAEb95029583" target="_blank" rel="noopener noreferrer">https://etherscan.io/address/0x74B4f6A2E579D730aAcb9dD23cfbbAEb95029583</a></p>
+
+        <h2>Community tools and campaigns</h2>
+        <p>Community-built tools are unofficial; their availability and mechanics can change. Verify the domain and permissions before connecting a wallet.</p>
+        <ul>
+          <li>NFTs: the previous whitepaper describes a 1,111-card community-minted collection. That supply was not re-counted for this snapshot. Collection: <a href="https://www.launchmynft.io/collections/0xCa0c599b34f0B40CFE34398cf19C7f4aE6a18bF7/95lCiIBiLTjMP8zOxnsm" target="_blank" rel="noopener noreferrer">LaunchMyNFT</a></li>
+          <li>Trivia: <a href="https://trivia.bnbguy.io/" target="_blank" rel="noopener noreferrer">https://trivia.bnbguy.io/</a> — check current game terms, prices and transaction behaviour rather than relying on older descriptions.</li>
+          <li>Dashboard: <a href="https://dashboard.bnbguy.io/" target="_blank" rel="noopener noreferrer">https://dashboard.bnbguy.io/</a> — community holder tracking and campaign information; not a guarantee of eligibility or payment.</li>
+        </ul>
+        <p>The previous whitepaper records three completed campaigns totalling 11,315,000 BNBGUY: Birthday Party Giveaway, Airdrop to the Trenches and Exchange Poll Giveaway. This is historical project reporting, not a new transaction-by-transaction audit of every recipient. No new airdrop date or entitlement is promised here.</p>
+        <ul>
+          <li><a href="https://dashboard.bnbguy.io/giveaways/ffcfad81-100d-41ce-bc40-0f02ba19aa86" target="_blank" rel="noopener noreferrer">Birthday Party Giveaway</a> — historical record: 2,500 BNBGUY to 2,026 participants.</li>
+          <li><a href="https://dashboard.bnbguy.io/giveaways/81e83a06-77ba-443b-9aae-a36ad3c436f3" target="_blank" rel="noopener noreferrer">Airdrop to the Trenches</a> — historical record: 5,000 BNBGUY to 1,000 participants.</li>
+          <li><a href="https://dashboard.bnbguy.io/giveaways/12080ea1-b64f-4afd-ad2f-b7dd9b7d478d" target="_blank" rel="noopener noreferrer">Exchange Poll Giveaway</a> — historical record: 25,000 BNBGUY to 50 participants.</li>
+          <li><a href="https://dashboard.bnbguy.io/giveaways/8e275a3e-f87b-4072-b479-970cd2737e2c" target="_blank" rel="noopener noreferrer">Feeding the BNBGUY Bag Workers</a> — community campaign page. Not a guarantee of eligibility or payment, and no new entitlement is promised here.</li>
+        </ul>
+
+        <h2>Roadmap: records, priorities and ideas</h2>
+        <p>Project history: launch, community building, NFT collection, trivia and dashboard, as described in earlier versions.</p>
+        <p>Current priority: accurate public information and verifiable reporting. CoinGecko provides a BNBGUY market page; being tracked is not an endorsement or a centralised exchange listing.</p>
+        <p>Future ideas: DAO governance, additional community tools and a wider ecosystem. These are ideas, not scheduled deliverables, promised distributions or guaranteed exchange listings.</p>
+
+        <h2>Security and risk</h2>
+        <p>Owner renunciation is one contract fact, not a full security audit. CertiK Skynet provides an <a href="https://skynet.certik.com/tools/token-scan/bsc/0x28f6267de2d654d407253ac41bffd24fd21ff985" target="_blank" rel="noopener noreferrer">automated token scan, not a full audit</a>, and it is not a guarantee that trading is safe.</p>
+        <p>BNBGUY is a speculative meme token. Its price can fall to zero. Burned tokens, LP balances, community tools and transparency do not eliminate market, contract, custody or liquidity risk. Nothing here is financial advice or a promise of revenue or returns.</p>
+        <p>BNBGUY is not affiliated with or endorsed by CZ, Binance, BNB Chain, PancakeSwap, wallet providers or exchanges mentioned here. Never share your seed phrase or private key. Independently verify every contract and link.</p>
+
+        <h2>Sources and official links</h2>
+        <ul>
+          <li>Snapshot block: <a href="https://bscscan.com/block/132105546" target="_blank" rel="noopener noreferrer">https://bscscan.com/block/132105546</a></li>
+          <li>Token and holders: <a href="https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985</a></li>
+          <li>Contract read: <a href="https://bscscan.com/address/0x28f6267De2d654D407253aC41bffd24FD21ff985#readContract" target="_blank" rel="noopener noreferrer">owner() on BscScan</a></li>
+          <li>LP token and holders: <a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363" target="_blank" rel="noopener noreferrer">https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363</a></li>
+          <li>Founder LP extension: <a href="https://bscscan.com/tx/0x832c007a45c8488d6f61ecb1fa724929d98cec8c82f543d52c30a7bb2d03b6f9" target="_blank" rel="noopener noreferrer">https://bscscan.com/tx/0x832c007a45c8488d6f61ecb1fa724929d98cec8c82f543d52c30a7bb2d03b6f9</a></li>
+          <li>Live pair: <a href="https://dexscreener.com/bsc/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363" target="_blank" rel="noopener noreferrer">DexScreener</a></li>
+          <li>PancakeSwap swap: <a href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">PancakeSwap</a></li>
+          <li>Market page: <a href="https://www.coingecko.com/en/coins/bnbguy" target="_blank" rel="noopener noreferrer">CoinGecko</a></li>
+          <li>Automated scan: <a href="https://skynet.certik.com/tools/token-scan/bsc/0x28f6267de2d654d407253ac41bffd24fd21ff985" target="_blank" rel="noopener noreferrer">CertiK Skynet token scan</a></li>
+          <li>Website: <a href="https://bnbguy.io/">bnbguy.io</a> <em class="soc-tag">Official</em></li>
+          <li>Official X: <a href="https://x.com/BNBguy_BSC" target="_blank" rel="noopener noreferrer">@BNBguy_BSC</a> <em class="soc-tag">Official</em></li>
+          <li>Binance Square: <a href="https://www.binance.com/en/square/profile/BNBGUY_BSC" target="_blank" rel="noopener noreferrer">BNBGUY_BSC</a> <em class="soc-tag">Official</em></li>
+          <li>Community Telegram: <a href="https://t.me/bnb_guy" target="_blank" rel="noopener noreferrer">t.me/bnb_guy</a> <em class="soc-tag is-community">Community</em></li>
+          <li>Community TikTok: <a href="https://www.tiktok.com/@bnbguyonbsc" target="_blank" rel="noopener noreferrer">@bnbguyonbsc</a> <em class="soc-tag is-community">Community</em></li>
+          <li>Community Instagram: <a href="https://instagram.com/bnbguy.meme" target="_blank" rel="noopener noreferrer">@bnbguy.meme</a> <em class="soc-tag is-community">Community</em></li>
+        </ul>
+        <p>Memes welcome. Guarantees aren’t. Don’t trust — verify.</p>
+        <p>November 2026 revision. Data checked: 7 November 2026, 11:34:45 AEDT, block 132105546.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong class="brand-foot">BNBGUY</strong>
+        <p>The people's meme coin on BNB Chain.</p>
+        <p class="contract-foot">
+          Contract:
+          <code>0x28f6267De2d654D407253aC41bffd24FD21ff985</code>
+          <button type="button" class="btn btn-outline btn-sm" data-copy="0x28f6267De2d654D407253aC41bffd24FD21ff985" aria-label="Copy contract address">Copy</button>
+        </p>
+        <p class="contract-foot">
+          LP pair:
+          <code>0xFb300ebF79ec2f0101161eaA8c7127C728e7a363</code>
+        </p>
+      </div>
+      <div class="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>
+          $BNBGUY is a speculative meme token. It is not affiliated with or endorsed by CZ, Binance, BNB Chain, PancakeSwap, Coinbase Wallet, MetaMask, OKX Wallet, or any exchange named here.
+          Nothing here is financial advice or a promise of revenue or returns. The price can fall to zero.
+          Burned tokens, LP balances and community tools do not eliminate market, contract, custody or liquidity risk.
+          No exchange listings are claimed. Verify every address on-chain.
+        </p>
+        <p><strong>Memes welcome. Guarantees aren’t. Don’t trust — verify.</strong></p>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span id="year">2026</span> BNBGUY community</span>
+      <span class="footer-snap">On-chain snapshot: 7 November 2026, 11:34:45 AEDT · block 132105546</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>Copied</div>
+  <script src="../script.js"></script>
+</body>
+</html>

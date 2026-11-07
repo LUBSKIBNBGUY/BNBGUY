@@ -1,0 +1,100 @@
+{
+  "purpose": "Edited-files-only overlay. Apply each overlay_path onto the complete original live static root for that site. Do not replace a live site with this package, the media-omitted handoff archive, or the markdown repository.",
+  "deploy": false,
+  "merge_into_live_from_this_repo": false,
+  "files": [
+    {
+      "site": "bnbguy.io",
+      "overlay_path": "index.html",
+      "zip_path": "bnbguy/index.html",
+      "bytes": 51788,
+      "sha256": "8fd3e76c2202f0f67f3fa5b6e135e7b44b2921371ae8375d148ad25c40f9615c"
+    },
+    {
+      "site": "bnbguy.io",
+      "overlay_path": "styles.css",
+      "zip_path": "bnbguy/styles.css",
+      "bytes": 24771,
+      "sha256": "186f02359b55a3595e92f1216fc33e05a22e838c6c0e8080f0baae5efee07832"
+    },
+    {
+      "site": "bnbguy.io",
+      "overlay_path": "whitepaper/index.html",
+      "zip_path": "bnbguy/whitepaper/index.html",
+      "bytes": 24429,
+      "sha256": "0f26943dcfa8f2a723810cd91c67bea85bd05168f9f4d36db1e81de46dfe9502"
+    },
+    {
+      "site": "bnbguy.io",
+      "overlay_path": "whitepaper/images/bnbguy-whitepaper-cover.jpg",
+      "zip_path": "bnbguy/whitepaper/images/bnbguy-whitepaper-cover.jpg",
+      "bytes": 499355,
+      "sha256": "ddcf212d98f05ea05e2283b3f7eee048f77c42d8dc057b7b5b6025ee67a8fe1a"
+    },
+    {
+      "site": "bnbguy.io",
+      "overlay_path": "whitepaper/images/bnbguy-whitepaper-image-1.jpg",
+      "zip_path": "bnbguy/whitepaper/images/bnbguy-whitepaper-image-1.jpg",
+      "bytes": 156875,
+      "sha256": "7841d88ddf2fff38cbfc6b177d0f3d46a077d9841665f4dd666afa09d41cffd8"
+    },
+    {
+      "site": "bnbguy.io",
+      "overlay_path": "whitepaper/images/bnbguy-whitepaper-image-2.jpg",
+      "zip_path": "bnbguy/whitepaper/images/bnbguy-whitepaper-image-2.jpg",
+      "bytes": 85044,
+      "sha256": "2932e7bf54db59d79b094b8e8a647bb8cd64ef526839dbd3dbfb7d95d8de31ea"
+    },
+    {
+      "site": "term1000nator.com",
+      "overlay_path": "index.html",
+      "zip_path": "term/index.html",
+      "bytes": 25368,
+      "sha256": "c9a0b3a858f3db2b0030d6192f0f3ed2e37e13b553a8c663f86952a1add4f9c7"
+    },
+    {
+      "site": "term1000nator.com",
+      "overlay_path": "script.js",
+      "zip_path": "term/script.js",
+      "bytes": 7829,
+      "sha256": "30a5a829cafd074ed6bdd03f13608625619c8aa64dac51b14e67e30183142e6d"
+    }
+  ],
+  "bnbguy": {
+    "snapshot": "BNB Chain block 132105546, 7 November 2026, 11:34:45 AEDT",
+    "published_balances": {
+      "token_supply": "1,000,000,000",
+      "owner": "zero address",
+      "token_dead": "50,313,855 = 5.0313855% (5.03% rounded)",
+      "lp_total": "65,462.4621",
+      "lp_dead": "50,173.9648 = 76.645398%",
+      "lp_zero": "589.6557 = 0.900754%",
+      "lp_dead_plus_zero": "77.55%"
+    },
+    "omitted_aggregates": {
+      "not_published": [
+        "83.04%",
+        "96.89%",
+        "96.87%",
+        "85.59%",
+        "85.65%"
+      ],
+      "reason": "Dead and zero LP are stated exactly. Other contract balances are listed separately. owner() on 0xc8f14c26c32bc4bb51d41a6c7822a37bd7de5a9d and 0x22dc39bfd015e131e6393d9ec78ce7144188bd37 returned the dead address, but the withdrawal implementation was not audited, so those balances are not classified as permanent protection. A prior 85.59% future figure was bad arithmetic: 96.889 - 11.240 = 85.649, which rounds to 85.65. That conditional total is omitted too, on both the homepage and the whitepaper, because the classifications are unresolved."
+    },
+    "images": {
+      "cover": "Prepared November cover, unchanged. Top line is WHITEPAPER 3.0 \u2014 NOVEMBER 2026. Banner art from the supplied file still says LIQUIDITY BURNED and COMMUNITY OWNED; body copy does not treat those slogans as verified claims.",
+      "image-1": "Replaced the 24 October liquidity chart. The new HTML chart is the on-page visual and does not embed this file. Overwrite the live file anyway so the old URL cannot keep serving 96.87% / permanence claims.",
+      "image-2": "Replaced the revenue-cycle diagram with a conditional four-step sequence. Same URL-overwrite rule. No guaranteed income."
+    }
+  },
+  "term1000nator.com": {
+    "change": "The old Last updated field showed 2026-11-04 because script.js copied the newest curated log date. It now labels Latest chapter 2026-11-04 and Count checked 2026-11-07 \u2014 132 sent, 868 remaining. The curated latest entry, release schedule, all 42 post links (52 hrefs), and both chapter videos are unchanged.",
+    "anonymity": "About text remains Australian Navy veteran only. No personal name and no Melbourne."
+  },
+  "do_not_change": {
+    "workers": "Keep main_module worker.js, ASSETS binding, and run_worker_first ['/v/*'] on both bnbguy-site and rough-brook-ae76. Do not convert either deployment to assets-only. TERM worker source was not in the archive; do not invent a replacement.",
+    "media": "Every v/* object omitted from the handoff archives must stay byte-for-byte in the live deployments, including posters.",
+    "headers": "_headers was not edited.",
+    "x": "No X post, article edit, or profile change was made."
+  }
+}
