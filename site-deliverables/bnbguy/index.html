@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BNBGUY — the people's meme coin on BNB Chain. Stated 0% token tax. Trade on PancakeSwap." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>BNBGUY — The People's Meme Coin on BNB Chain</title>
+  <link rel="canonical" href="https://bnbguy.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BNBGUY" />
+  <meta property="og:url" content="https://bnbguy.io/" />
+  <meta property="og:title" content="BNBGUY — The People's Meme Coin on BNB Chain" />
+  <meta property="og:description" content="BNBGUY — the people's meme coin on BNB Chain. Stated 0% token tax. Trade on PancakeSwap." />
+  <meta property="og:image" content="https://bnbguy.io/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BNBGUY mascot with the text: The people's meme coin on BNB Chain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@BNBguy_BSC" />
+  <meta name="twitter:title" content="BNBGUY — The People's Meme Coin on BNB Chain" />
+  <meta name="twitter:description" content="BNBGUY — the people's meme coin on BNB Chain. Stated 0% token tax. Trade on PancakeSwap." />
+  <meta name="twitter:image" content="https://bnbguy.io/assets/og.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon-64.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="BNBGUY home">
+        <picture><source srcset="assets/bnbguy-head-96.webp" type="image/webp" /><img src="assets/bnbguy-head.png" alt="" width="40" height="40" /></picture>
+        <span>BNBGUY</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#buy">How to buy</a>
+        <a href="#chart">Chart</a>
+        <a href="#verify">Verify</a>
+        <a href="#watch">Watch</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="/whitepaper/">Whitepaper</a>
+        <a href="#links">Links</a>
+      </nav>
+      <a class="btn btn-gold btn-sm" href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#utilities">Utilities</a>
+      <a href="#buy">How to buy</a>
+      <a href="#chart">Chart</a>
+      <a href="#verify">Verify</a>
+      <a href="#faq">FAQ</a>
+      <a href="#community">Community</a>
+      <a href="#watch">Watch</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#links">Links</a>
+      <a href="/whitepaper/">Whitepaper</a>
+      <a class="btn btn-gold" href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Community-run meme coin · BNB Chain</p>
+          <h1>BNB GUY</h1>
+          <p class="tagline">The people's meme coin on BNB Chain.</p>
+          <p class="lead">
+            Honest vibes and a community that gets it. One clear contract, a stated 0% token tax, and liquidity on <strong>PancakeSwap</strong>.
+          </p>
+          <div class="contract-box" role="group" aria-label="Token contract">
+            <span class="contract-label">Contract</span>
+            <code id="contract-address" class="addr" translate="no">0x28f6267De2d654D407253aC41bffd24FD21ff985</code>
+            <button type="button" class="btn btn-outline btn-sm" id="copy-contract" data-copy="0x28f6267De2d654D407253aC41bffd24FD21ff985" aria-label="Copy contract address">
+              Copy
+            </button>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">Buy $BNBGUY</a>
+            <a class="btn btn-outline" href="https://dexscreener.com/bsc/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363" target="_blank" rel="noopener noreferrer">DexScreener</a>
+            <a class="btn btn-outline" href="https://www.coingecko.com/en/coins/bnbguy" target="_blank" rel="noopener noreferrer">CoinGecko</a>
+            <a class="btn btn-ghost" href="https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">BSCScan</a>
+          </div>
+          <p class="notice">Meme coin. Price can fall to zero. Only spend what you can afford to lose. <a href="#disclaimer">Disclaimer</a></p>
+          <p class="notice">
+            Community tools like trivia and dashboards are built by holders. These are community-built and unofficial: never connect your wallet to a site you have not verified. BNBGUY is a community-run project and this is its home site, <strong>bnbguy.io</strong>, so always check the contract above before trading.
+          </p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="glow"></div>
+          <picture><source srcset="assets/bnbguy-head.webp" type="image/webp" /><img src="assets/bnbguy-head.png" alt="BNBGUY mascot" width="360" height="360" class="hero-logo" fetchpriority="high" /></picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS STRIP -->
+    <section class="partners" aria-label="Wallets, trackers, socials, DEX, and security">
+      <div class="wrap">
+        <h2 class="partners-kicker">Ecosystem</h2>
+        <p class="partners-note">Third-party tools and services that work with BNB Chain. Listed for convenience only, no partnership implied.</p>
+        <div class="partners-grid">
+          <div class="partner-group">
+            <h3 class="partner-cat">Preferred wallets</h3>
+            <p class="partner-note">Any BNB Chain wallet can hold $BNBGUY. These are the ones we recommend. Add the contract address as a custom token if it doesn't show up automatically.</p>
+            <ul class="partners-row is-text">
+              <li><a href="https://link.metamask.io/asset?assetId=eip155%3A56%2Ferc20%3A0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer"><span>MetaMask</span></a></li>
+              <li><a href="https://web3.okx.com/ul/HNDq9Jm" target="_blank" rel="noopener noreferrer"><span>OKX Wallet</span></a></li>
+              <li><a href="https://www.coinbase.com/wallet/downloads" target="_blank" rel="noopener noreferrer"><span>Coinbase Wallet</span></a></li>
+              <li><a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&amp;tokenCA=0x28f6267de2d654d407253ac41bffd24fd21ff985&amp;binanceChainId=56&amp;chain=bsc" target="_blank" rel="noopener noreferrer"><span>Binance Wallet</span></a></li>
+            </ul>
+          </div>
+          <div class="partner-group">
+            <h3 class="partner-cat">Trackers</h3>
+            <ul class="partners-row is-text">
+              <li><a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363" target="_blank" rel="noopener noreferrer"><span>DEXTools</span></a></li>
+              <li><a href="https://dexscreener.com/bsc/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363" target="_blank" rel="noopener noreferrer"><span>DexScreener</span></a></li>
+              <li><a href="https://www.coingecko.com/en/coins/bnbguy" target="_blank" rel="noopener noreferrer"><span>CoinGecko</span></a></li>
+            </ul>
+          </div>
+          <div class="partner-group">
+            <h3 class="partner-cat">Official</h3>
+            <p class="partner-note">Only these accounts are run by BNBGUY. Beware of impersonators.</p>
+            <ul class="partners-row">
+              <li><a href="https://x.com/BNBguy_BSC" target="_blank" rel="noopener" aria-label="X @BNBguy_BSC (opens in new tab)"><img src="assets/icon-x.png" alt="" width="40" height="40" loading="lazy" /><span>X</span><em class="soc-tag">Official</em></a></li>
+              <li><a href="https://www.binance.com/en/square/profile/BNBGUY_BSC" target="_blank" rel="noopener" aria-label="Binance Square BNBGUY_BSC (opens in new tab)"><img src="assets/icon-binance.png" alt="" width="40" height="40" loading="lazy" /><span>Binance Square</span><em class="soc-tag">Official</em></a></li>
+            </ul>
+          </div>
+          <div class="partner-group">
+            <h3 class="partner-cat">Community</h3>
+            <p class="partner-note">Run by and for the community.</p>
+            <ul class="partners-row">
+              <li><a href="https://t.me/bnb_guy" target="_blank" rel="noopener" aria-label="Telegram t.me/bnb_guy (opens in new tab)"><img src="assets/icon-telegram.png" alt="" width="40" height="40" loading="lazy" /><span>Telegram</span><em class="soc-tag is-community">Community</em></a></li>
+              <li><a href="https://www.tiktok.com/@bnbguyonbsc" target="_blank" rel="noopener" aria-label="TikTok @bnbguyonbsc (opens in new tab)"><img src="assets/icon-tiktok.png" alt="" width="40" height="40" loading="lazy" /><span>TikTok</span><em class="soc-tag is-community">Community</em></a></li>
+              <li><a href="https://instagram.com/bnbguy.meme" target="_blank" rel="noopener" aria-label="Instagram @bnbguy.meme (opens in new tab)"><img src="assets/icon-instagram.png" alt="" width="40" height="40" loading="lazy" /><span>Instagram</span><em class="soc-tag is-community">Community</em></a></li>
+            </ul>
+          </div>
+          <div class="partner-group">
+            <h3 class="partner-cat">DEX</h3>
+            <ul class="partners-row is-text">
+              <li><a href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer"><span>PancakeSwap</span></a></li>
+            </ul>
+          </div>
+          <div class="partner-group">
+            <h3 class="partner-cat">Security</h3>
+            <ul class="partners-row is-text">
+              <li><a href="https://skynet.certik.com/tools/token-scan/bsc/0x28f6267de2d654d407253ac41bffd24fd21ff985" target="_blank" rel="noopener noreferrer"><span>Automated token scan by CertiK Skynet (not a full audit).</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2>About $BNBGUY</h2>
+        <p class="section-lead">
+          BNBGUY is a community-run meme token on BNB Smart Chain. The project describes a 0% buy, sell and transfer tax. At the 7 November 2026 snapshot, 77.55% of Cake-LP sat at the dead and zero addresses. That is a dated balance, not a price floor or a promise about future trades.
+        </p>
+        <div class="cards three">
+          <article class="card">
+            <h3>0% tax</h3>
+            <p>Described as 0% buy, 0% sell and 0% transfer. Gas and exchange fees still apply. This page does not certify a fresh tax test. Verify the current settings yourself on explorers and scanners.</p>
+          </article>
+          <article class="card">
+            <h3>LP balances</h3>
+            <p>
+              Cake-LP and BNBGUY tokens are different assets. At BNB Chain block 132105546 (7 November 2026, 11:34:45 AEDT) the pair reported <strong>65,462.4621 Cake-LP</strong>.
+              Dead address: <strong>50,173.9648 LP (76.645398%)</strong>. Zero address: <strong>589.6557 LP (0.900754%)</strong>. Combined dead and zero addresses: <strong>77.55%</strong>.
+              Separately, the BNBGUY balance at the dead address was <strong>50,313,855</strong> (5.0313855% of the 1,000,000,000 contract-reported supply, 5.03% rounded). Sending tokens to the dead address does not reduce totalSupply().
+              <a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0x000000000000000000000000000000000000dead" target="_blank" rel="noopener noreferrer">Check LP at the dead address on BscScan</a>
+            </p>
+            <p class="lp-locks-title"><strong>Other LP contracts</strong> — balances only. A dead-address owner() result is not proof that every withdrawal path is impossible. These rows are not added into a burned-or-locked total.</p>
+            <ul class="lp-locks">
+              <li><strong>3,595.68 LP (5.49%)</strong> <a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0xc8f14c26c32bc4bb51d41a6c7822a37bd7de5a9d" target="_blank" rel="noopener noreferrer"><code>0xc8f1…5a9d</code></a> — owner() returned the dead address. Withdrawal implementation not audited.</li>
+              <li><strong>7,357.68 LP (11.24%)</strong> <a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0xe5fb46157e52a0616fee8d1a198b98c4a9409054" target="_blank" rel="noopener noreferrer"><code>0xe5fb…9054</code></a> — project record: founder’s lock, extended on 21 October 2026 to 1 January 2028 (<a href="https://bscscan.com/tx/0x832c007a45c8488d6f61ecb1fa724929d98cec8c82f543d52c30a7bb2d03b6f9" target="_blank" rel="noopener noreferrer">extension tx</a>). The date is a project record, not a new audit of the withdrawal path.</li>
+              <li><strong>1,708.74 LP (2.61%)</strong> <a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0x22dc39bfd015e131e6393d9ec78ce7144188bd37" target="_blank" rel="noopener noreferrer"><code>0x22dc…bd37</code></a> — owner() returned the dead address. Project record gives an unlock date of 2 January 2036. Withdrawal implementation not audited.</li>
+              <li><strong>1,303.1290 LP (1.99%)</strong> <a href="https://bscscan.com/token/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?a=0xf6c999ea7e4afb5593b87ac6bd09b5346419406c" target="_blank" rel="noopener noreferrer"><code>0xf6c9…406c</code></a> — project record: a community member’s lock whose term ended on 4 September 2026. Not presented as currently time-locked.</li>
+            </ul>
+            <p class="lp-note">Snapshot read at block 132105546. Dead and zero amounts are the exact checked values. Other contract amounts are the reviewed snapshot figures. Lock dates are identified project records. These balances do not guarantee a minimum price, stable liquidity, low volatility or protection from loss. No combined burned-or-locked percentage is stated, because the withdrawal paths were not audited. Details match the <a href="/whitepaper/">November 2026 whitepaper</a>.
+            </p>
+            <div class="lp-live" id="lp-live" aria-live="polite" hidden>
+              <p class="lp-live-title"><strong>Pool data</strong> <span class="lp-live-label">live from DexScreener</span></p>
+              <p id="lp-live-body"></p>
+            </div>
+          </article>
+          <article class="card">
+            <h3>How it works</h3>
+            <p>
+              There is no guaranteed revenue. When treasury funds are available, the stated approach is to add liquidity, burn the LP tokens received and publish the transactions. Reports should distinguish funds added, LP received, LP burned and any separate CAKE or BNBGUY token burns. There is no fixed burn schedule and no guaranteed allocation of future receipts (<a href="/whitepaper/">November 2026 whitepaper</a>).
+            </p>
+            <ol class="approach">
+              <li><strong>Funds available</strong><span>Only if funds exist. Holdings are not cash income.</span></li>
+              <li><strong>Add liquidity</strong><span>Stated use of those funds.</span></li>
+              <li><strong>Burn received LP</strong><span>The LP tokens from that addition.</span></li>
+              <li><strong>Publish links</strong><span>Transaction links. No fixed schedule.</span></li>
+            </ol>
+          </article>
+        </div>
+        <figure class="lp-visual" aria-labelledby="lp-visual-title">
+          <h3 id="lp-visual-title">Cake-LP at block 132105546</h3>
+          <p class="snap-note">7 November 2026, 11:34:45 AEDT. Total 65,462.4621 Cake-LP. Gold rows are balances at the dead and zero addresses (77.55% combined). Grey rows are other contracts and are not treated as burned. Bar lengths are proportional to share of total LP. The zero-address bar is a thin slice; its label carries the exact share.</p>
+          <div class="lp-group">
+            <p class="lp-group-title">Dead and zero addresses · 77.55%</p>
+            <div class="lp-row">
+              <span class="lp-label">Dead address</span>
+              <span class="lp-track" role="img" aria-label="76.645398 percent"><span class="lp-fill" style="width:76.645398%"></span></span>
+              <span class="lp-meta">50,173.9648 LP · 76.645398%</span>
+            </div>
+            <div class="lp-row">
+              <span class="lp-label">Zero address</span>
+              <span class="lp-track" role="img" aria-label="0.900754 percent"><span class="lp-fill is-thin" style="width:0.900754%"></span></span>
+              <span class="lp-meta">589.6557 LP · 0.900754%</span>
+            </div>
+          </div>
+          <div class="lp-group is-other">
+            <p class="lp-group-title">Other contracts · balances only, withdrawal paths not audited</p>
+            <div class="lp-row">
+              <span class="lp-label"><code>0xc8f1…5a9d</code></span>
+              <span class="lp-track" role="img" aria-label="5.49 percent"><span class="lp-fill" style="width:5.49%"></span></span>
+              <span class="lp-meta">3,595.68 LP · 5.49% · owner() dead · withdrawal not audited</span>
+            </div>
+            <div class="lp-row">
+              <span class="lp-label"><code>0xe5fb…9054</code></span>
+              <span class="lp-track" role="img" aria-label="11.24 percent"><span class="lp-fill" style="width:11.24%"></span></span>
+              <span class="lp-meta">7,357.68 LP · 11.24% · project record, unlock 1 January 2028</span>
+            </div>
+            <div class="lp-row">
+              <span class="lp-label"><code>0x22dc…bd37</code></span>
+              <span class="lp-track" role="img" aria-label="2.61 percent"><span class="lp-fill" style="width:2.61%"></span></span>
+              <span class="lp-meta">1,708.74 LP · 2.61% · owner() dead · project record, unlock 2 January 2036 · withdrawal not audited</span>
+            </div>
+            <div class="lp-row">
+              <span class="lp-label"><code>0xf6c9…406c</code></span>
+              <span class="lp-track" role="img" aria-label="1.99 percent"><span class="lp-fill" style="width:1.99%"></span></span>
+              <span class="lp-meta">1,303.1290 LP · 1.99% · project record, term ended 4 September 2026 · not presented as time-locked</span>
+            </div>
+          </div>
+          <p class="snap-note">Separate BNBGUY token balance at the dead address: 50,313,855 (5.03% of supply). That is not an LP percentage. These rows are not a complete holder list and are not combined into a burned-or-locked percentage.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section class="section alt" id="tokenomics" aria-labelledby="tokenomics-title">
+      <div class="wrap">
+        <h2 id="tokenomics-title">Tokenomics</h2>
+        <p class="section-lead">At block 132105546 the contract reported a total supply of 1,000,000,000 BNBGUY (18 decimals) and owner() returned the zero address. Sending tokens to the dead address does not reduce that contract-reported totalSupply().</p>
+        <div class="cards three">
+          <article class="card">
+            <h3>100% to liquidity</h3>
+            <p>The launch record describes 100% of tokens entering liquidity, with no presale and no team allocation. That describes the initial distribution, not current ownership or a guarantee about anyone’s future trades (<a href="/whitepaper/">November 2026 whitepaper</a>).</p>
+          </article>
+          <article class="card">
+            <h3>0% tax</h3>
+            <p>The project describes its token tax as 0% buy, sell and transfer. Gas and exchange fees still apply. This page does not certify a fresh tax or honeypot test. <a href="https://skynet.certik.com/tools/token-scan/bsc/0x28f6267de2d654d407253ac41bffd24fd21ff985" target="_blank" rel="noopener noreferrer">CertiK Skynet</a> is an automated token scan, not a full audit.</p>
+          </article>
+          <article class="card">
+            <h3>Owner renounced</h3>
+            <p>At block 132105546, owner() returned the zero address. That is one contract fact, not a full security audit. <a href="https://bscscan.com/address/0x28f6267De2d654D407253aC41bffd24FD21ff985#readContract" target="_blank" rel="noopener noreferrer">Read owner() on BscScan</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- UTILITIES -->
+    <section class="section" id="utilities" aria-labelledby="utilities-title">
+      <div class="wrap">
+        <h2 id="utilities-title">Utilities</h2>
+        <p class="section-lead">Community-built, unofficial tools. Never connect your wallet to a site you have not verified.</p>
+        <div class="cards three">
+          <article class="card">
+            <h3>NFTs</h3>
+            <p>The previous whitepaper describes a 1,111-card community-minted collection. That supply was not re-counted for this November snapshot. Community-built, unofficial. <a href="https://www.launchmynft.io/collections/0xCa0c599b34f0B40CFE34398cf19C7f4aE6a18bF7/95lCiIBiLTjMP8zOxnsm" target="_blank" rel="noopener noreferrer">View the collection</a></p>
+          </article>
+          <article class="card">
+            <h3>Trivia</h3>
+            <p>A community lore quiz at <a href="https://trivia.bnbguy.io/" target="_blank" rel="noopener noreferrer">trivia.bnbguy.io</a>. Community-built and unofficial. Check current game terms, prices and transaction behaviour rather than relying on older descriptions.</p>
+          </article>
+          <article class="card">
+            <h3>Dashboard</h3>
+            <p>Community holder tracking and campaign information at <a href="https://dashboard.bnbguy.io/" target="_blank" rel="noopener noreferrer">dashboard.bnbguy.io</a>. Community-built and unofficial. Not a guarantee of eligibility or payment.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET THE GUY (3D) -->
+    <section class="section showroom" id="meet" aria-labelledby="meet-title">
+      <div class="wrap showroom-grid">
+        <div class="showroom-copy">
+          <p class="eyebrow">In 3D</p>
+          <h2 id="meet-title">Meet the Guy</h2>
+          <p class="section-lead">
+            Same smirk, more angles. The Guy in full 3D, repping BNB Chain on his chest.
+          </p>
+        </div>
+        <figure class="guy-stage" id="guy-stage" data-model="assets/bnbguy-bnbchain.glb" data-draco="assets/draco/">
+          <div class="stage-glow" aria-hidden="true"></div>
+          <div class="stage-pedestal" aria-hidden="true"></div>
+          <picture><source srcset="assets/bnbguy-head.webp" type="image/webp" /><img class="guy-poster" src="assets/bnbguy-head.png" alt="BNBGUY mascot" width="320" height="320" loading="lazy" decoding="async" /></picture>
+          <div class="guy-canvas" role="img" aria-label="Interactive 3D model of the BNBGUY mascot. Drag to spin him."></div>
+          <p class="guy-status" hidden>Loading 3D...</p>
+          <figcaption class="guy-caption">Drag to spin him.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- HOW TO BUY -->
+    <section class="section alt" id="buy">
+      <div class="wrap">
+        <h2>How to buy</h2>
+        <p class="section-lead">
+          Buy $BNBGUY on <strong>PancakeSwap</strong> (BNB Smart Chain) using
+          <strong>MetaMask</strong>, <strong>OKX Wallet</strong>, <strong>Coinbase Wallet</strong>, or <strong>Binance Wallet</strong>.
+          Store long-term in a hardware wallet. Hardware is for holding, not for buying inside the device.
+        </p>
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div>
+              <h3>Get a supported wallet</h3>
+              <p>Install or open <strong>MetaMask</strong>, <strong>Coinbase Wallet</strong>, <strong>OKX Wallet</strong>, or <strong>Binance Wallet</strong>. Add BNB Smart Chain and keep spare BNB for gas.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div>
+              <h3>Open PancakeSwap</h3>
+              <p>Connect your wallet on BNB Chain. Use the official swap link and paste the contract if the token isn’t pre-filled.</p>
+              <a class="btn btn-gold btn-sm" href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">Open PancakeSwap swap</a>
+              <p class="fineprint">Meme coin. Price can fall to zero. Only spend what you can afford to lose. <a href="#disclaimer">Disclaimer</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div>
+              <h3>Swap BNB → $BNBGUY</h3>
+              <p>Double-check the contract matches <code>0x28f6267De2d654D407253aC41bffd24FD21ff985</code>, then confirm the swap.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div>
+              <h3>Hold safely</h3>
+              <p>
+                For cold storage, move tokens to a hardware wallet.
+                Hardware wallets are for storing and holding, never presented here as places to buy inside the device.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CHART -->
+    <section class="section" id="chart">
+      <div class="wrap">
+        <h2>Live chart</h2>
+        <p class="section-lead">
+          No fake price numbers here. Live pair data from DexScreener for the PancakeSwap V2 BNBGUY/WBNB pool.
+        </p>
+        <div class="chart-frame">
+          <iframe
+            title="BNBGUY DexScreener chart"
+            referrerpolicy="strict-origin-when-cross-origin"
+            src="https://dexscreener.com/bsc/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?embed=1&amp;theme=dark&amp;trades=0&amp;info=0"
+            loading="lazy"
+            allow="clipboard-write"
+          ></iframe>
+        </div>
+        <p class="chart-fallback">
+          Chart not loading?
+          <a href="https://dexscreener.com/bsc/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363" target="_blank" rel="noopener noreferrer">Open DexScreener</a>
+          · Pair <code>0xFb300ebF79ec2f0101161eaA8c7127C728e7a363</code>
+        </p>
+        <p class="chart-caption">Live chart via DexScreener. Not financial advice.</p>
+      </div>
+    </section>
+
+    <!-- VERIFY -->
+    <section class="section" id="verify" aria-labelledby="verify-title">
+      <div class="wrap">
+        <h2 id="verify-title">Verify it yourself</h2>
+        <p class="section-lead">Don't trust, verify. Every link below is built from the official contract <code class="addr" translate="no">0x28f6267De2d654D407253aC41bffd24FD21ff985</code>. Third-party tools can be wrong, so check more than one.</p>
+        <ol class="verify-list">
+          <li><a href="https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer"><strong>Token page on BscScan</strong><span>Check that the contract address matches exactly.</span></a></li>
+          <li><a href="https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985#balances" target="_blank" rel="noopener noreferrer"><strong>Top holders on BscScan</strong><span>See who holds the supply, including the LP pair.</span></a></li>
+          <li><a href="https://bscscan.com/address/0x28f6267De2d654D407253aC41bffd24FD21ff985#code" target="_blank" rel="noopener noreferrer"><strong>Contract code on BscScan</strong><span>Read the verified source code.</span></a></li>
+          <li><a href="https://honeypot.is/?address=0x28f6267De2d654D407253aC41bffd24FD21ff985&amp;chain=bsc" target="_blank" rel="noopener noreferrer"><strong>Tax and honeypot check (honeypot.is)</strong><span>Third-party simulation of buy and sell tax.</span></a></li>
+          <li><a href="https://tokensniffer.com/token/bsc/0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer"><strong>Token scan (Token Sniffer)</strong><span>Third-party automated scan, not an audit.</span></a></li>
+          <li><a href="https://skynet.certik.com/tools/token-scan/bsc/0x28f6267de2d654d407253ac41bffd24fd21ff985" target="_blank" rel="noopener noreferrer"><strong>Token scan (CertiK Skynet)</strong><span>Automated token scan, not a full audit.</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 id="faq-title">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>What is $BNBGUY?</summary>
+            <p>A meme coin on BNB Smart Chain, traded on PancakeSwap. It is not affiliated with Binance, BNB Chain or any exchange. Price can fall to zero, so only spend what you can afford to lose.</p>
+          </details>
+          <details>
+            <summary>How do I buy safely?</summary>
+            <p>Use a wallet such as MetaMask, OKX Wallet, Coinbase Wallet or Binance Wallet on BNB Smart Chain, open PancakeSwap from the official link on this page, and check the contract matches <code class="addr" translate="no">0x28f6267De2d654D407253aC41bffd24FD21ff985</code> before you confirm. Keep spare BNB for gas.</p>
+          </details>
+          <details>
+            <summary>How does tax work?</summary>
+            <p>The project describes the token tax as 0% buy, 0% sell and 0% transfer. You still pay normal BNB gas fees and PancakeSwap's swap fee. This site does not certify a fresh tax or honeypot test. Check the tax yourself with the tools under <a href="#verify">Verify it yourself</a>.</p>
+          </details>
+          <details>
+            <summary>How do I spot scams?</summary>
+            <p>Only trust the contract on this page and the official accounts listed under Links. We will never DM you first and will never ask for your seed phrase or private key. Community-built tools are unofficial, so never connect your wallet to a site you have not verified.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="section" id="community" aria-labelledby="community-title">
+      <div class="wrap">
+        <h2 id="community-title">Community &amp; treasury</h2>
+        <div class="cards three">
+          <article class="card">
+            <h3>Airdrops</h3>
+            <p>The previous whitepaper records three completed campaigns totalling 11,315,000 BNBGUY: Birthday Party Giveaway (2,500 BNBGUY each to 2,026 participants), Airdrop to the Trenches (5,000 BNBGUY each to 1,000 participants) and Exchange Poll Giveaway (25,000 BNBGUY each to 50 participants). This is historical project reporting, not a new transaction-by-transaction audit. No new airdrop date or entitlement is promised here.</p>
+            <p>See the community-built <a href="https://dashboard.bnbguy.io/" target="_blank" rel="noopener noreferrer">dashboard</a>. It is not a guarantee of eligibility or payment.</p>
+          </article>
+          <article class="card">
+            <h3>Feeding the BNBGUY Bag Workers</h3>
+            <p>A later community campaign page on the unofficial <a href="https://dashboard.bnbguy.io/" target="_blank" rel="noopener noreferrer">dashboard</a>. No new airdrop date or entitlement is promised here, and the page is not a guarantee of eligibility or payment.</p>
+          </article>
+          <article class="card">
+            <h3>Treasury holdings</h3>
+            <p>Earlier versions disclosed WLFI and NFT holdings. Those quantities and vesting terms have not been independently refreshed for this November snapshot, so they are not repeated here as current balances. Holding an asset does not create a partnership with its issuer. Historical treasury reference: <a href="https://etherscan.io/address/0x74B4f6A2E579D730aAcb9dD23cfbbAEb95029583" target="_blank" rel="noopener noreferrer">Etherscan</a>.</p>
+          </article>
+          <article class="card">
+            <h3>A public wallet, not a partnership</h3>
+            <p>At the 7 November 2026 snapshot, the public wallet previously identified by BscScan’s CZ label, <code>0x28816c4c4792467390c90e5b426f198570e29307</code>, held 72,417,127.6856 BNBGUY (7.24%). A balance or explorer label does not establish endorsement, partnership or participation by CZ or Binance.</p>
+            <p>BNBGUY is a fan tribute. It is not affiliated with, endorsed by or connected to CZ or Binance.</p>
+            <p><a href="https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985?a=0x28816c4c4792467390c90e5b426f198570e29307" target="_blank" rel="noopener noreferrer">Verify on BscScan</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WATCH -->
+    <section class="section" id="watch" aria-labelledby="watch-title">
+      <div class="wrap">
+        <h2 id="watch-title">Watch</h2>
+        <p class="section-lead">BNBGUY videos, as posted on <a href="https://x.com/BNBguy_BSC" target="_blank" rel="noopener noreferrer">X</a>. Newest first. Memes, not financial advice.</p>
+        <div class="videos">
+          <figure class="vid vid-featured">
+            <video controls playsinline preload="none" poster="/v/bnbguy-showcase.jpg" width="720" height="1022"><source src="/v/bnbguy-showcase.mp4" type="video/mp4" />Your browser cannot play this video.</video>
+            <figcaption>Featured: the BNBGUY showcase video. <span class="vid-meta">5 Nov 2026</span></figcaption>
+          </figure>
+        </div>
+        <div class="videos videos-grid">
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2116493018790609032.jpg" width="720" height="1280"><source src="/v/bnbguy-2116493018790609032.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2116493018790609032" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Happy Halloween from BNBGUY. A hacker checked the wallet: “Nothing to steal, buddy.” Never share your seed phrase. <span class="vid-meta">31 Oct 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2116493018790609032" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2115266573061796130.jpg" width="720" height="1088"><source src="/v/bnbguy-2115266573061796130.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2115266573061796130" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Quiet nights, steady steps. Still walking. 🟡 <span class="vid-meta">28 Oct 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2115266573061796130" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2113552390762958930.jpg" width="720" height="1280"><source src="/v/bnbguy-2113552390762958930.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2113552390762958930" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Down 90% and still dressed for the party. Some things don't stay buried 🎃🧟🟡 (🎥 by @utdman4eva1) <span class="vid-meta">23 Oct 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2113552390762958930" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2113455951126921380.jpg" width="448" height="672"><source src="/v/bnbguy-2113455951126921380.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2113455951126921380" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Trick or treat? Around here we just hold 🎃🟡 <span class="vid-meta">23 Oct 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2113455951126921380" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2110877344223330445.jpg" width="1280" height="720"><source src="/v/bnbguy-2110877344223330445.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2110877344223330445" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Never gonna give you up 🦊 Never gonna rug you down 🟡 <span class="vid-meta">15 Oct 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2110877344223330445" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2108356630652100850.jpg" width="752" height="560"><source src="/v/bnbguy-2108356630652100850.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2108356630652100850" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Teaching aliens to DJ, because even across galaxies, chill vibes are universal 👽🎧 <span class="vid-meta">9 Oct 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2108356630652100850" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2107954830635585666.jpg" width="960" height="720"><source src="/v/bnbguy-2107954830635585666.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2107954830635585666" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>What is love? Holding $BNBGUY, baby don't dump me 🎶🚗 <span class="vid-meta">7 Oct 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2107954830635585666" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2106581289868652946.jpg" width="958" height="720"><source src="/v/bnbguy-2106581289868652946.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2106581289868652946" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Just a BNBGUY against the world. 🎤 Community made. <span class="vid-meta">4 Oct 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2106581289868652946" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2092561479610560770.jpg" width="1280" height="720"><source src="/v/bnbguy-2092561479610560770.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2092561479610560770" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>If you kiss me I turn into…? 👀 <span class="vid-meta">26 Aug 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2092561479610560770" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2082205544715313305.jpg" width="1280" height="720"><source src="/v/bnbguy-2082205544715313305.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2082205544715313305" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Waking up to a random dream that does not make sense. 😴🥱👀 <span class="vid-meta">28 Jul 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2082205544715313305" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+          <figure class="vid">
+            <video controls playsinline preload="none" poster="/v/bnbguy-2079384597041922369.jpg" width="320" height="708"><source src="/v/bnbguy-2079384597041922369.mp4" type="video/mp4" />Your browser cannot play this video. <a href="https://x.com/BNBguy_BSC/status/2079384597041922369" target="_blank" rel="noopener noreferrer">View on X</a>.</video>
+            <figcaption>Hasta la vista, paper hands. 🤖 <span class="vid-meta">21 Jul 2026 &middot; <a href="https://x.com/BNBguy_BSC/status/2079384597041922369" target="_blank" rel="noopener noreferrer">View on X</a></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section alt" id="roadmap">
+      <div class="wrap">
+        <h2>Roadmap</h2>
+        <p class="section-lead">Simple phases. No overclaims. Progress is community-visible and on-chain where it counts.</p>
+        <div class="roadmap">
+          <article class="road-item done">
+            <span class="badge">Done</span>
+            <h3>Launch &amp; foundation</h3>
+            <p>Project history: launch, with the launch record describing 100% of tokens entering liquidity and no team allocation, plus community building and earlier transparency reports (<a href="/whitepaper/">November 2026 whitepaper</a>).</p>
+            <!-- TODO(owner): optionally add the launch tx link: https://bscscan.com/tx/0x... -->
+          </article>
+          <article class="road-item done">
+            <span class="badge">Done</span>
+            <h3>Utility unlocked</h3>
+            <p>NFT collection, trivia and dashboard, as described in earlier versions. Any LP addition or burn should be read from its own transaction link. There is no fixed burn schedule.</p>
+          </article>
+          <article class="road-item now">
+            <span class="badge">Now</span>
+            <h3>Expansion &amp; presence</h3>
+            <p>CoinGecko provides a BNBGUY market page. Being tracked is not an endorsement or a centralised exchange listing. Keep the public record accurate.</p>
+          </article>
+          <article class="road-item soon">
+            <span class="badge">Idea</span>
+            <h3>The Memeverse (idea)</h3>
+            <p>Future ideas: DAO governance, additional community tools and a wider ecosystem. These are ideas, not scheduled deliverables, promised distributions or guaranteed exchange listings.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="section" id="links">
+      <div class="wrap">
+        <h2>Links</h2>
+        <p class="notice">
+          <strong>Project links.</strong> BNBGUY is community-run; its home site is <strong>bnbguy.io</strong> <em class="soc-tag">Official</em>. Official accounts (only these are run by BNBGUY, beware of impersonators):
+          X <strong>@BNBguy_BSC</strong> <em class="soc-tag">Official</em>, Binance Square <strong>BNBGUY_BSC</strong> <em class="soc-tag">Official</em>.
+          Community accounts (run by and for the community): Telegram <strong>t.me/bnb_guy</strong> <em class="soc-tag is-community">Community</em>, TikTok <strong>@bnbguyonbsc</strong> <em class="soc-tag is-community">Community</em>, Instagram <strong>@bnbguy.meme</strong> <em class="soc-tag is-community">Community</em>.
+          Official contract: <code>0x28f6267De2d654D407253aC41bffd24FD21ff985</code>.
+          We will never DM you first and will never ask for your seed phrase or private key.
+        </p>
+        <p class="fineprint">Dashboard, Trivia and NFTs: community-built, unofficial. Never connect your wallet to a site you have not verified.</p>
+        <div class="link-grid">
+          <a class="link-card" href="https://dashboard.bnbguy.io/" target="_blank" rel="noopener noreferrer">
+            <picture><source srcset="assets/bnbguy-head-96.webp" type="image/webp" /><img src="assets/bnbguy-head.png" alt="" width="32" height="32" loading="lazy" /></picture>
+            <div>
+              <strong>Community Dashboard</strong>
+              <span>dashboard.bnbguy.io · community-built, unofficial</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://trivia.bnbguy.io/" target="_blank" rel="noopener noreferrer">
+            <picture><source srcset="assets/bnbguy-head-96.webp" type="image/webp" /><img src="assets/bnbguy-head.png" alt="" width="32" height="32" loading="lazy" /></picture>
+            <div>
+              <strong>BNBguy Trivia</strong>
+              <span>trivia.bnbguy.io · community-built, unofficial</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://www.launchmynft.io/collections/0xCa0c599b34f0B40CFE34398cf19C7f4aE6a18bF7/95lCiIBiLTjMP8zOxnsm" target="_blank" rel="noopener noreferrer">
+            <picture><source srcset="assets/bnbguy-head-96.webp" type="image/webp" /><img src="assets/bnbguy-head.png" alt="" width="32" height="32" loading="lazy" /></picture>
+            <div>
+              <strong>BNBguy NFTs</strong>
+              <span>Collection on LaunchMyNFT</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">
+            <span class="link-mono" aria-hidden="true">PCS</span>
+            <div>
+              <strong>PancakeSwap</strong>
+              <span>Swap BNB → $BNBGUY</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://pancakeswap.finance/info/v2/pairs/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363?chain=bsc" target="_blank" rel="noopener noreferrer">
+            <span class="link-mono" aria-hidden="true">PCS</span>
+            <div>
+              <strong>PancakeSwap pair</strong>
+              <span>0xFb300ebF…e7a363</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://dexscreener.com/bsc/0xfb300ebf79ec2f0101161eaa8c7127c728e7a363" target="_blank" rel="noopener noreferrer">
+            <span class="link-mono" aria-hidden="true">DS</span>
+            <div>
+              <strong>DexScreener</strong>
+              <span>Live chart &amp; trades</span>
+            </div>
+          </a>
+          <a class="link-card" href="/whitepaper/">
+            <span class="link-mono" aria-hidden="true">WP</span>
+            <div>
+              <strong>Whitepaper 3.0</strong>
+              <span>November 2026 transparency update</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://bscscan.com/token/0x28f6267De2d654D407253aC41bffd24FD21ff985" target="_blank" rel="noopener noreferrer">
+            <span class="link-mono" aria-hidden="true">BSC</span>
+            <div>
+              <strong>BSCScan</strong>
+              <span>Token contract</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://www.coingecko.com/en/coins/bnbguy" target="_blank" rel="noopener noreferrer">
+            <span class="link-mono" aria-hidden="true">CG</span>
+            <div>
+              <strong>CoinGecko</strong>
+              <span>Market page</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://x.com/BNBguy_BSC" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-x.png" alt="" width="32" height="32" loading="lazy" />
+            <div>
+              <strong>X / Twitter <em class="soc-tag">Official</em></strong>
+              <span>@BNBguy_BSC</span>
+            </div>
+          </a>
+          <a class="link-card" href="https://www.binance.com/en/square/profile/BNBGUY_BSC" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-binance.png" alt="" width="32" height="32" loading="lazy" />
+            <div>
+              <strong>Binance Square <em class="soc-tag">Official</em></strong>
+              <span>BNBGUY_BSC</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong class="brand-foot">BNBGUY</strong>
+        <p>The people's meme coin on BNB Chain.</p>
+        <p><a href="/whitepaper/">Read the whitepaper</a></p>
+        <p class="contract-foot">
+          Contract:
+          <code>0x28f6267De2d654D407253aC41bffd24FD21ff985</code>
+          <button type="button" class="btn btn-outline btn-sm" data-copy="0x28f6267De2d654D407253aC41bffd24FD21ff985" aria-label="Copy contract address">Copy</button>
+        </p>
+        <p class="contract-foot">
+          LP pair:
+          <code>0xFb300ebF79ec2f0101161eaA8c7127C728e7a363</code>
+        </p>
+      </div>
+      <div class="disclaimer" id="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>
+          $BNBGUY is a community-run meme coin and a fan tribute. It is not affiliated with, or endorsed by, CZ, Binance, BNB Chain, PancakeSwap or any wallet or exchange named on this site.
+          Nothing here is financial advice or a promise of price, returns or exchange listings. The price can fall to zero: only spend what you can afford to lose.
+          Third-party tools and community-built sites are unofficial. Verify every address on-chain before you trade.
+        </p>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span id="year">2026</span> BNBGUY community</span>
+      <span class="footer-snap">On-chain snapshot: 7 November 2026, 11:34:45 AEDT · block 132105546</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>Copied</div>
+  <script src="script.js"></script>
+</body>
+</html>
