@@ -49,8 +49,8 @@
       "site": "term1000nator.com",
       "overlay_path": "index.html",
       "zip_path": "term/index.html",
-      "bytes": 25746,
-      "sha256": "e7013a013b044c91ce7f38a777afab1689d74955c471d52129e7a1cc94ba50dd"
+      "bytes": 26490,
+      "sha256": "90d86335348bc8fb5fafdd995bb2ccd1f4f6adf1d1cb3d63b41f1b15ba293df3"
     },
     {
       "site": "term1000nator.com",
@@ -96,9 +96,9 @@
       "duration_seconds": 59.2,
       "site_path": "/v/ch3.mp4",
       "parent_file": "/workspace/videos/ch3-final.mp4",
-      "x_post": null,
-      "counter": "unchanged at 132 sent, 868 remaining",
-      "latest_log": "unchanged Book Two, Chapter 3 (2026-11-04)"
+      "x_post": "https://x.com/TERM1000NATOR/status/2118892297429635199",
+      "counter": "133 sent, 867 remaining, checked 2026-11-07",
+      "latest_log": "Book One Chapter 3 video is the latest transmission. Book Two Chapter 3 remains the 2026-11-04 chapter entry."
     }
   },
   "do_not_change": {

@@ -152,7 +152,10 @@ for name in ("bnbguy-whitepaper-image-1.jpg", "bnbguy-whitepaper-image-2.jpg"):
 if "last-updated" in script or "querySelectorAll('.log .log-ts')" in script:
     fail("TERM script still overwrites the chapter date into Last updated")
 must_contain(term, "<dt>Latest chapter</dt>\n        <dd>2026-11-04</dd>", "term")
-must_contain(term, "<dt>Count checked</dt>\n        <dd>2026-11-07 — 132 sent, 868 remaining</dd>", "term")
+must_contain(term, "<dt>Count checked</dt>\n        <dd>2026-11-07 — 133 sent, 867 remaining</dd>", "term")
+must_contain(term, '<span class="tx-num">867</span>', "term")
+if "132 sent" in term or "868 remaining" in term or ">868<" in term:
+    fail("stale 132/868 counter still visible")
 must_not(term, "Last updated", "term")
 must_contain(term, "Australian Navy veteran", "term")
 must_not(term, "Melbourne", "term")
@@ -161,22 +164,23 @@ must_contain(term, "one chapter on X and Medium each Wednesday", "term")
 must_contain(term, "https://x.com/TERM1000NATOR/status/2117816140928069914", "term")
 ids = re.findall(r"https://x.com/TERM1000NATOR/status/(\d+)", term)
 orig_ids = re.findall(r"https://x.com/TERM1000NATOR/status/(\d+)", orig_term)
-if ids != orig_ids:
-    fail(f"TERM status links changed ({len(ids)} hrefs, {len(set(ids))} unique)")
-if len(set(ids)) != 42 or len(ids) != 52:
-    fail(f"expected 52 hrefs / 42 unique TERM posts, got {len(ids)} / {len(set(ids))}")
+new_post = "2118892297429635199"
+if set(ids) - {new_post} != set(orig_ids) or new_post not in ids:
+    fail(f"TERM curated posts changed beyond the new Chapter 3 post ({len(set(ids))} unique)")
+if len(set(ids)) != 43:
+    fail(f"expected 43 unique TERM posts, got {len(set(ids))}")
 if re.findall(r"/v/ch[12]\.(?:mp4|jpg)", term) != re.findall(r"/v/ch[12]\.(?:mp4|jpg)", orig_term):
     fail("TERM ch1/ch2 videos changed")
 ch3 = re.search(r'<figure class="vid">\s*<video[^>]*>\s*<source src="/v/ch3\.mp4".*?</figure>', term, re.S)
 if not ch3:
     fail("TERM Chapter 3 video card missing /v/ch3.mp4")
-elif "Chapter 3: The Missing Variable" not in ch3.group(0) or "You’ve saved the hardware. And left the operating system behind." not in ch3.group(0) or "x.com/" in ch3.group(0):
+elif "Chapter 3: The Missing Variable" not in ch3.group(0) or "You’ve saved the hardware. And left the operating system behind." not in ch3.group(0) or ch3.group(0).count("2118892297429635199") != 2:
     fail("TERM Chapter 3 card title, caption, or X link is wrong")
-if term.count("132 sent, 868 remaining") < 2:
-    fail("TERM 132/868 count was changed")
+if term.count("133 sent, 867 remaining") < 2:
+    fail("TERM 133/867 count missing")
 if "NOAH'S ARK 2.0 &mdash; Book Two, Chapter 3" not in term:
     fail("Book Two Chapter 3 latest post was replaced")
-if "868" not in term or "132 sent" not in term:
+if "867" not in term or "133 sent" not in term:
     fail("TERM count missing")
 
 # Nothing in the deliverable should be a worker or v/* media blob.
