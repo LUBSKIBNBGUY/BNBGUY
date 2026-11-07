@@ -49,8 +49,8 @@
       "site": "term1000nator.com",
       "overlay_path": "index.html",
       "zip_path": "term/index.html",
-      "bytes": 25368,
-      "sha256": "c9a0b3a858f3db2b0030d6192f0f3ed2e37e13b553a8c663f86952a1add4f9c7"
+      "bytes": 25746,
+      "sha256": "e7013a013b044c91ce7f38a777afab1689d74955c471d52129e7a1cc94ba50dd"
     },
     {
       "site": "term1000nator.com",
@@ -89,7 +89,17 @@
   },
   "term1000nator.com": {
     "change": "The old Last updated field showed 2026-11-04 because script.js copied the newest curated log date. It now labels Latest chapter 2026-11-04 and Count checked 2026-11-07 \u2014 132 sent, 868 remaining. The curated latest entry, release schedule, all 42 post links (52 hrefs), and both chapter videos are unchanged.",
-    "anonymity": "About text remains Australian Navy veteran only. No personal name and no Melbourne."
+    "anonymity": "About text remains Australian Navy veteran only. No personal name and no Melbourne.",
+    "chapter3_video": {
+      "title": "Chapter 3: The Missing Variable",
+      "caption": "You\u2019ve saved the hardware. And left the operating system behind.",
+      "duration_seconds": 59.2,
+      "site_path": "/v/ch3.mp4",
+      "parent_file": "/workspace/videos/ch3-final.mp4",
+      "x_post": null,
+      "counter": "unchanged at 132 sent, 868 remaining",
+      "latest_log": "unchanged Book Two, Chapter 3 (2026-11-04)"
+    }
   },
   "do_not_change": {
     "workers": "Keep main_module worker.js, ASSETS binding, and run_worker_first ['/v/*'] on both bnbguy-site and rough-brook-ae76. Do not convert either deployment to assets-only. TERM worker source was not in the archive; do not invent a replacement.",

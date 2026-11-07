@@ -166,7 +166,16 @@ if ids != orig_ids:
 if len(set(ids)) != 42 or len(ids) != 52:
     fail(f"expected 52 hrefs / 42 unique TERM posts, got {len(ids)} / {len(set(ids))}")
 if re.findall(r"/v/ch[12]\.(?:mp4|jpg)", term) != re.findall(r"/v/ch[12]\.(?:mp4|jpg)", orig_term):
-    fail("TERM videos changed")
+    fail("TERM ch1/ch2 videos changed")
+ch3 = re.search(r'<figure class="vid">\s*<video[^>]*>\s*<source src="/v/ch3\.mp4".*?</figure>', term, re.S)
+if not ch3:
+    fail("TERM Chapter 3 video card missing /v/ch3.mp4")
+elif "Chapter 3: The Missing Variable" not in ch3.group(0) or "You’ve saved the hardware. And left the operating system behind." not in ch3.group(0) or "x.com/" in ch3.group(0):
+    fail("TERM Chapter 3 card title, caption, or X link is wrong")
+if term.count("132 sent, 868 remaining") < 2:
+    fail("TERM 132/868 count was changed")
+if "NOAH'S ARK 2.0 &mdash; Book Two, Chapter 3" not in term:
+    fail("Book Two Chapter 3 latest post was replaced")
 if "868" not in term or "132 sent" not in term:
     fail("TERM count missing")
 
